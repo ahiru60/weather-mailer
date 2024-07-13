@@ -15,7 +15,7 @@ const userRoutes = require('./Routes/users');
 
 app.use(express.json());
 router.use('/users', userRoutes);
-app.use('/.netlify/functions/api', userRoutes);
+app.use('/.netlify/functions/api', router);
 setInterval(execute, 3 * 60 * 60 * 1000);
 //execute();
 app.listen(port, () => {
