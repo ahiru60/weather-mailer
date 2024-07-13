@@ -99,8 +99,8 @@ async function sendWeatherReports() {
       `;
         const result = await model.generateContent(prompt+weatherInfo);
         const response = await result.response;
-        const text = response.text();
-
+        const text = response.text().replace("*","");
+        console.log(text);
       const mailOptions = {
         from: process.env.EMAIL_ADDRESS,
         to: user.email,

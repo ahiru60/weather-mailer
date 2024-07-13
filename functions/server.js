@@ -1,6 +1,7 @@
 require('dotenv').config();
 const express = require('express');
 const app = express();
+const router = express.Router();
 const port = process.env.PORT || 3000;
 const { default: mongoose } = require('mongoose');
 const { execute } = require('./Utils/scheduler');
@@ -13,9 +14,10 @@ db.once('open',()=>{console.log('Connected to database')})
 const userRoutes = require('./Routes/users');
 
 app.use(express.json());
-app.use('/users', userRoutes);
-//setInterval(execute, 3 * 60 * 60 * 1000);
-execute();
+router.use('/users', userRoutes);
+app.use('/.netlify/functions/api', userRoutes);
+setInterval(execute, 3 * 60 * 60 * 1000);
+//execute();
 app.listen(port, () => {
     console.log(`Server running at http://localhost:${port}/`);
 });
