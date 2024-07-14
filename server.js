@@ -10,7 +10,7 @@ const db = mongoose.connection;
 db.on('error',(error)=>{console.log(error)});
 db.once('open',()=>{console.log('Connected to database')})
 
-const userRoutes = require('./Routes/users');
+const userRoutes = require('./users');
 
 app.use(express.json());
 app.use('/users', userRoutes);
