@@ -1,9 +1,9 @@
 require('dotenv').config();
 const express = require('express');
 const router = express.Router();
-const User = require('../Models/user'); 
-const fetchData = require('./Utils/apiService');
-const { execute } = require('./Utils/scheduler');
+const User = require('./Models/user'); 
+const fetchData = require('./functions/Utils/apiService');
+const { execute } = require('./functions/Utils/scheduler');
 
 // get all users
 router.get('/', async(req, res) => {

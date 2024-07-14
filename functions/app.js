@@ -7,7 +7,7 @@ const express = require('express');
 const app = express();
 const port = process.env.PORT || 3000;
 const { default: mongoose } = require('mongoose');
-const { execute } = require('../Utils/scheduler');
+const { execute } = require('./Utils/scheduler');
 const router = express.Router();
 
 mongoose.connect(process.env.DATABASE_URL);

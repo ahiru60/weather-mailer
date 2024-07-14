@@ -3,7 +3,7 @@ const express = require('express');
 const app = express();
 const port = process.env.PORT || 3000;
 const { default: mongoose } = require('mongoose');
-const { execute } = require('./Utils/scheduler');
+const { execute } = require('./functions/Utils/scheduler');
 
 mongoose.connect(process.env.DATABASE_URL);
 const db = mongoose.connection;
