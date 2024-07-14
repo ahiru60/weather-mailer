@@ -75,7 +75,8 @@ Ensure you have the following installed:
 
 ```http
 GET [/users](http://localhost:3000/users/)
-
+```
 ### Create User
 ```http
 POST [/users](http://localhost:3000/users/)](http://localhost:3000/users/)
+```
