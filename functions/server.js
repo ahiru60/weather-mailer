@@ -9,14 +9,14 @@ const app = express();
 const router = express.Router();
 const port = process.env.PORT || 3000;
 const { default: mongoose } = require('mongoose');
-const { execute } = require('../Utils/scheduler');
+const { execute } = require('./Utils/scheduler');
 
 mongoose.connect(process.env.DATABASE_URL);
 const db = mongoose.connection;
 db.on('error',(error)=>{console.log(error)});
 db.once('open',()=>{console.log('Connected to database')})
 
-const userRoutes = require('../users');
+const userRoutes = require('./users');
 
 app.use(express.json());
 router.use('/users', userRoutes);
