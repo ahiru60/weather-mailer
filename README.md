@@ -22,7 +22,7 @@ Weather Mailer is designed to keep users informed about the weather in their loc
 - Stores user information and location in MongoDB.
 - Sends hourly weather updates via email.
 - REST API for managing users.
-- AI email generation
+- AI email generation.
 
 ## Installation
 
