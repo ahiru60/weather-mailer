@@ -80,3 +80,4 @@ GET [/users](http://localhost:3000/users/)
 ```http
 POST [/users](http://localhost:3000/users/)](http://localhost:3000/users/)
 ```
+## Postman collection - https://documenter.getpostman.com/view/24448852/2sA3e5f8uY
