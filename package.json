@@ -18,8 +18,11 @@
     "express": "^4.19.2",
     "gemini-api": "^2.0.4",
     "mongoose": "^8.5.1",
+    "netlify-cli": "^17.33.3",
+    "netlify-lambda": "^2.0.16",
     "node-cron": "^3.0.3",
     "nodemailer": "^6.9.14",
-    "nodemon": "^3.1.4"
+    "nodemon": "^3.1.4",
+    "serverless-http": "^3.2.0"
   }
 }

@@ -62,29 +62,5 @@ router.post('/', async(req, res) => {
     }
     
 });
-//update user
-router.patch('/:email', (req, res) => {
-    res.json({ message: 'PATCH request to the items endpoint' });
-}); 
-// delete user
-router.delete('/:email', (req, res) => {
-    res.json({ message: 'DELETE request to the items endpoint' });
-});
-
-// async function getUser(res,req,next){
-
-//     let user
-//     try{
-//         user = await User.find(req.params.email);
-//         if(user == null){
-//             return res.status(404).json({message:"Cannot find user"});
-//         }
-//     }catch(err){
-//         return res.status(500).json({message:err.message})
-//     }
-
-//     res.user = user;
-//     next()
-// }
 
 module.exports = router;
