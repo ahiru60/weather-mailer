@@ -3,7 +3,7 @@ const express = require('express');
 const app = express();
 const port = process.env.PORT || 3000;
 const { default: mongoose } = require('mongoose');
-const { execute } = require('./functions/Utils/scheduler');
+const { execute } = require('./Utils/scheduler');
 
 mongoose.connect(process.env.DATABASE_URL);
 const db = mongoose.connection;
@@ -15,7 +15,7 @@ const userRoutes = require('./users');
 app.use(express.json());
 app.use('/users', userRoutes);
 setInterval(execute, 3 * 60 * 60 * 1000);
-//execute();
+execute();
 app.listen(port, () => {
     console.log(`Server running at http://localhost:${port}/`);
 });
