@@ -15,7 +15,7 @@ const userRoutes = require('../users');
 
 app.use(express.json());
 router.use('/users', userRoutes);
-app.use('/.netlify/functions/api', router);
+app.use('/.netlify/functions/server', router);
 setInterval(execute, 3 * 60 * 60 * 1000);
 //execute();
 module.exports.handler = serverless(app);
