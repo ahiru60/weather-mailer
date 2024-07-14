@@ -1,11 +1,15 @@
 require('dotenv').config();
+
+const serverless = require("serverless-http");
+const bodyParser = require('body-parser');
+const cors = require('cors');
+
 const express = require('express');
 const app = express();
 const router = express.Router();
 const port = process.env.PORT || 3000;
 const { default: mongoose } = require('mongoose');
 const { execute } = require('../Utils/scheduler');
-const User = require('../Models/user');
 
 mongoose.connect(process.env.DATABASE_URL);
 const db = mongoose.connection;
