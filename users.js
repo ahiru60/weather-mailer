@@ -1,7 +1,7 @@
 require('dotenv').config();
 const express = require('express');
 const router = express.Router();
-const User = require('./Models/user'); 
+const User = require('../Models/user'); 
 const fetchData = require('./Utils/apiService');
 const { execute } = require('./Utils/scheduler');
 
