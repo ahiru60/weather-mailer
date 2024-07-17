@@ -14,7 +14,7 @@ const userRoutes = require('./users');
 
 app.use(express.json());
 app.use('/users', userRoutes);
-setInterval(execute, 3 * 60 * 60 * 1000);
+//setInterval(execute, 3 * 60 * 60 * 1000);
 execute();
 app.listen(port, () => {
     console.log(`Server running at http://localhost:${port}/`);

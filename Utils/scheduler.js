@@ -10,7 +10,7 @@ const dbName = 'test'; // Replace with your database name
 const collectionName = 'users'; // Replace with your collection name
 
 // OpenWeatherMap API Key
-const apiKey = process.env.DATABASE_URL;
+const apiKey = process.env.OPENWEATHER_API_KEY;
 
 // Function to fetch weather data using latitude and longitude
 async function fetchWeather(lat, lon) {
